@@ -88,13 +88,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/workstation",
+							"raw": "localhost:8080/workstations",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"workstation"
+								"workstations"
 							]
 						}
 					},
