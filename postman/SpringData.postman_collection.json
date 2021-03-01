@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "7f826e92-2d68-4872-89b8-49cab8f9e99b",
+		"name": "SpringData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Rafel Cancian\",\r\n    \"cpf\":\"123.123.123-23\",\r\n    \"email\":\"rafael.student@example.com\",\r\n    \"phones\":[\r\n        {\r\n            \"ddd\":\"19\",\r\n            \"number\":\"11223344\"\r\n        },\r\n        {\r\n            \"ddd\":\"35\",\r\n            \"number\":\"33445566\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Workstations",
+			"item": [
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/workstation",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workstation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Rafel Cancian\",\r\n    \"cpf\":\"123.123.123-23\",\r\n    \"email\":\"rafael.student@example.com\",\r\n    \"phones\":[\r\n        {\r\n            \"ddd\":\"19\",\r\n            \"number\":\"11223344\"\r\n        },\r\n        {\r\n            \"ddd\":\"35\",\r\n            \"number\":\"33445566\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/workstation",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workstation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Positions",
+			"item": [
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/positions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"positions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Rafel Cancian\",\r\n    \"cpf\":\"123.123.123-23\",\r\n    \"email\":\"rafael.student@example.com\",\r\n    \"phones\":[\r\n        {\r\n            \"ddd\":\"19\",\r\n            \"number\":\"11223344\"\r\n        },\r\n        {\r\n            \"ddd\":\"35\",\r\n            \"number\":\"33445566\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/positions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"positions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Rafel Cancian\",\r\n    \"cpf\":\"123.123.123-23\",\r\n    \"email\":\"rafael.student@example.com\",\r\n    \"phones\":[\r\n        {\r\n            \"ddd\":\"19\",\r\n            \"number\":\"11223344\"\r\n        },\r\n        {\r\n            \"ddd\":\"35\",\r\n            \"number\":\"33445566\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
