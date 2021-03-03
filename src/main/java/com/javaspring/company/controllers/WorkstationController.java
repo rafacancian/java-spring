@@ -2,6 +2,8 @@ package com.javaspring.company.controllers;
 
 
 import com.javaspring.company.dtos.WorkstationDTO;
+import com.javaspring.company.entities.Workstation;
+import com.javaspring.company.usecases.WorkstationUsecase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,19 +16,24 @@ import java.util.List;
 @AllArgsConstructor
 public class WorkstationController {
 
+    private WorkstationUsecase workstationUsecase;
+
     @GetMapping
     public ResponseEntity<List<WorkstationDTO>> findAll() {
-        return ResponseEntity.status(HttpStatus.OK).body(List.of());
+        final List<WorkstationDTO> result = workstationUsecase.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
     @PostMapping
-    public ResponseEntity<WorkstationDTO> create(@RequestBody WorkstationDTO WorkstationDTO) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(WorkstationDTO);
+    public ResponseEntity<WorkstationDTO> create(@RequestBody Workstation Workstation) {
+        final WorkstationDTO result = workstationUsecase.create(Workstation);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
     @PutMapping
-    public ResponseEntity<WorkstationDTO> update(@RequestBody WorkstationDTO WorkstationDTO) {
-        return ResponseEntity.status(HttpStatus.OK).body(WorkstationDTO);
+    public ResponseEntity<WorkstationDTO> update(@RequestBody Workstation Workstation) {
+        final WorkstationDTO result = workstationUsecase.create(Workstation);
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
     @DeleteMapping

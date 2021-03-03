@@ -2,6 +2,8 @@ package com.javaspring.company.controllers;
 
 
 import com.javaspring.company.dtos.PositionDTO;
+import com.javaspring.company.entities.Position;
+import com.javaspring.company.usecases.PositionUsecase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,18 +16,23 @@ import java.util.List;
 @AllArgsConstructor
 public class PositionsController {
 
+    PositionUsecase positionUsecase;
+
     @GetMapping
     public ResponseEntity<List<PositionDTO>> findAll() {
-        return ResponseEntity.status(HttpStatus.OK).body(List.of());
+        final List<PositionDTO> result = positionUsecase.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
     @PostMapping
-    public ResponseEntity<PositionDTO> create(@RequestBody PositionDTO positionDTO) {
+    public ResponseEntity<PositionDTO> create(@RequestBody Position position) {
+        final PositionDTO positionDTO = positionUsecase.create(position);
         return ResponseEntity.status(HttpStatus.CREATED).body(positionDTO);
     }
 
     @PutMapping
-    public ResponseEntity<PositionDTO> update(@RequestBody PositionDTO positionDTO) {
+    public ResponseEntity<PositionDTO> update(@RequestBody Position position) {
+        final PositionDTO positionDTO = positionUsecase.create(position);
         return ResponseEntity.status(HttpStatus.OK).body(positionDTO);
     }
 
