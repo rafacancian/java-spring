@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -24,6 +25,7 @@ public class EmployeeDTO implements Serializable {
     private LocalDate birthday;
     private LocalDate hiringDate;
     private Position position;
+    private List<WorkstationDTO> workstations;
 
 }
 
