@@ -3,7 +3,6 @@ package com.javaspring.company.entities;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "positions")
@@ -17,6 +16,7 @@ public class Position {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @OneToMany(mappedBy = "position")
-    private List<Employee> employees;
+//    @Fetch(FetchMode.SELECT)
+//    @OneToMany(mappedBy = "position", fetch = FetchType.LAZY)
+//    private List<Employee> employees;
 }

@@ -39,7 +39,7 @@ public class Employee {
     @Column(name = "hiringDate", nullable = false)
     private LocalDate hiringDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "position_id", nullable = false)
     private Position position;
 

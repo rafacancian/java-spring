@@ -27,5 +27,5 @@ public class Workstation {
     private String description;
 
     @ManyToMany(mappedBy = "workstations", fetch = FetchType.EAGER)
-    private List<Employee> employee;
+    private List<Employee> employees;
 }
