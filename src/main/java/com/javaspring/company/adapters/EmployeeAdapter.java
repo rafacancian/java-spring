@@ -4,6 +4,7 @@ import com.javaspring.company.dtos.EmployeeDTO;
 import com.javaspring.company.entities.Employee;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EmployeeAdapter {
     public static EmployeeDTO toModel(Employee result) {
@@ -14,12 +15,23 @@ public class EmployeeAdapter {
                 .birthday(result.getBirthday())
                 .phone(result.getPhone())
                 .salary(result.getSalary())
-                .position(result.getPosition())
                 .hiringDate(result.getHiringDate())
+                .position(result.getPosition())
+                .workstations(WorkstationAdapter.toModel(result.getWorkstations()))
                 .build();
     }
 
     public static List<EmployeeDTO> toModel(List<Employee> result) {
-        return List.of();
+        return result.stream().map(r -> EmployeeDTO.builder()
+                .name(r.getName())
+                .cpf(r.getCpf())
+                .address(r.getAddress())
+                .birthday(r.getBirthday())
+                .phone(r.getPhone())
+                .salary(r.getSalary())
+                .hiringDate(r.getHiringDate())
+                .position(r.getPosition())
+                .workstations(WorkstationAdapter.toModel(r.getWorkstations()))
+                .build()).collect(Collectors.toList());
     }
 }
