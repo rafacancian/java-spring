@@ -25,7 +25,6 @@ public class PositionUsecase {
         return PositionAdapter.toModel(result);
     }
 
-
     public PositionDTO create(Position position) {
         Position result = repository.save(position);
         return PositionAdapter.toModel(result);
