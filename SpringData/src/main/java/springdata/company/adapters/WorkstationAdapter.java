@@ -3,8 +3,8 @@ package springdata.company.adapters;
 import springdata.company.dtos.WorkstationDTO;
 import springdata.company.entities.Workstation;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WorkstationAdapter {
     public static WorkstationDTO toModel(Workstation result) {
@@ -17,14 +17,6 @@ public class WorkstationAdapter {
     }
 
     public static List<WorkstationDTO> toModel(List<Workstation> result) {
-        List<WorkstationDTO> workstationDTOS = new ArrayList<>();
-        result.forEach(r -> workstationDTOS.add(
-                WorkstationDTO.builder()
-                        .cep(r.getCep())
-                        .city(r.getCity())
-                        .name(r.getName())
-                        .description(r.getDescription())
-                        .build()));
-        return workstationDTOS;
+        return result.stream().map(WorkstationAdapter::toModel).collect(Collectors.toList());
     }
 }
