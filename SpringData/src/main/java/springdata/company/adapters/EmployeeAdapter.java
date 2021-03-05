@@ -22,16 +22,6 @@ public class EmployeeAdapter {
     }
 
     public static List<EmployeeDTO> toModel(List<Employee> result) {
-        return result.stream().map(r -> EmployeeDTO.builder()
-                .name(r.getName())
-                .cpf(r.getCpf())
-                .address(r.getAddress())
-                .birthday(r.getBirthday())
-                .phone(r.getPhone())
-                .salary(r.getSalary())
-                .hiringDate(r.getHiringDate())
-                .position(r.getPosition())
-                .workstations(WorkstationAdapter.toModel(r.getWorkstations()))
-                .build()).collect(Collectors.toList());
+        return result.stream().map(EmployeeAdapter::toModel).collect(Collectors.toList());
     }
 }
