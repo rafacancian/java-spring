@@ -15,9 +15,7 @@ public class PositionAdapter {
     }
 
     public static List<PositionDTO> toModel(List<Position> result) {
-        return result.stream().map(r -> PositionDTO.builder()
-                .description(r.getDescription())
-                .build()).collect(Collectors.toList());
+        return result.stream().map(PositionAdapter::toModel).collect(Collectors.toList());
 
     }
 }
